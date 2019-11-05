@@ -7,7 +7,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      newTodo: '2222',
+      newTodo: '',
       todoList: [
         { id: 1, title: '第一个待办' },
         { id: 2, title: '第二个待办' }
