@@ -9,27 +9,27 @@ class Main extends Component {
     this.state = {
       newTodo: '',
       todoList: [
-        { id: 1, title: '第一个待办' },
-        { id: 2, title: '第二个待办' }
+
       ]
     }
   }
-  addTodo(){
+  addTodo() {
     console.log('我得添加一个 todo 了')
   }
   render() {
     let todos = this.state.todoList.map((item, index) => {
       return (
-        <li>
+        <li key={index} >
           <TodoItem todo={item} />
         </li>
       )
     })
+    console.log(todos)
     return (
       <div className="main">
         <div><h1>我的待办</h1>
           <div className="inputWrapper">
-            <TodoInput content={this.state.newTodo} addTodo={this.addTodo}/>
+            <TodoInput content={this.state.newTodo} addTodo={this.addTodo} />
           </div>
           <ol>
             {todos}
